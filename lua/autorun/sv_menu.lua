@@ -16,7 +16,7 @@ util.AddNetworkString("daj")
 --bodygroupy
 	net.Receive("bodygroupy_grupy", function(len, ply)
 		local bodygroupy = net.ReadTable()
-		[1] = math.Round(bodygroupy[1])
+		bodygroupy[1] = math.Round(bodygroupy[1])
 		bodygroupy[2] = math.Round(bodygroupy[2])
 		ply:SetBodygroup(bodygroupy[1], bodygroupy[2])
 	end)
